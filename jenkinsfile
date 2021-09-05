@@ -1,4 +1,4 @@
-node('node1'){
+node{
     def mavenhome=tool name:"Maven"
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '15', numToKeepStr: '10')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([githubPush()])])
 stage('checkout code'){
